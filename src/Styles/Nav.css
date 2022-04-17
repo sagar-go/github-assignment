@@ -85,17 +85,25 @@ nav {
   cursor: pointer;
 }
 
-.cards .card2 div {
+.cards .card2 .below {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cards .card2 .below div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2%;
+  width: auto;
+  width: 30%;
+  gap: 4%;
 }
 
-.cards .card2 div span {
+.cards .card2 .below span {
   margin-right: 8%;
   font-size: 1rem;
   color: inherit;
@@ -112,11 +120,10 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 18vh;
 }
 
 .title input {
-  width: 60%;
+  width: 50%;
   height: 6vh;
   background-color: background-color;
   border: none;
@@ -132,7 +139,7 @@ nav {
 }
 
 .title div {
-  width: 33%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,6 +149,7 @@ nav {
 }
 
 .title div select {
+  width: auto;
   height: 6vh;
 }
 
@@ -206,5 +214,180 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5%;
+  }
+  .title input {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .title div {
+    width: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 5% auto 0 auto;
+    gap: 2%;
+  }
+  .cards .card2 .below div {
+    width: 40%;
+    gap: 3%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 95%;
+  }
+  .cards {
+    width: 100%;
+  }
+  .cards .card1 {
+    width: 10%;
+  }
+  .cards .card2 {
+    width: 60%;
+  }
+  .cards .card2 p {
+    display: none;
+  }
+  .cards .card2 .below {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards .card2 .below div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    gap: 5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .img2 {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 105px;
+    border-radius: 50%;
+  }
+  .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pagination li {
+    padding: 1% 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5%;
+  }
+  .title input {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .title div {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 5% auto 0 auto;
+    gap: 5%;
+  }
+  .title div select {
+    margin: 2%;
+  }
+  .container {
+    width: 95%;
+  }
+  .cards {
+    width: 100%;
+  }
+  .cards .card1 h4 {
+    visibility: hidden;
+  }
+  .cards .card2 {
+    width: 60%;
+  }
+  .cards .card2 p {
+    display: none;
+  }
+  .cards .card2 .below {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards .card2 .below div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    gap: 5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .img2 {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 10%;
+  }
+  .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pagination li {
+    padding: 1% 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=Nav.css.map */

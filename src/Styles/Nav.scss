@@ -54,10 +54,20 @@ nav {
       color: color;
       cursor: pointer;
     }
-    div {
+    .below {
+      // div {
+      //   display: flex;
+      //   align-items: center;
+      //   gap: 2%;
       display: flex;
-      align-items: center;
-      gap: 2%;
+
+      div {
+        display: flex;
+        align-items: center;
+        width: auto;
+        width: 30%;
+        gap: 4%;
+      }
 
       span {
         margin-right: 8%;
@@ -74,9 +84,8 @@ nav {
   padding-top: 5%;
   display: flex;
   justify-content: space-between;
-  height: 18vh;
   input {
-    width: 60%;
+    width: 50%;
     height: 6vh;
     background-color: background-color;
     border: none;
@@ -90,11 +99,12 @@ nav {
     }
   }
   div {
-    width: 33%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
 
     select {
+      width: auto;
       height: 6vh;
     }
   }
@@ -144,4 +154,159 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and(max-width:1200px) {
+  .title {
+    flex-direction: column;
+    gap: 5%;
+    input {
+      width: 80%;
+
+      margin: 0 auto;
+    }
+    div {
+      width: 80%;
+      justify-content: center;
+
+      margin: 5% auto 0 auto;
+      gap: 2%;
+    }
+  }
+  .cards {
+    .card2 {
+      .below {
+        div {
+          width: 40%;
+          gap: 3%;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:850px) {
+  .container {
+    width: 95%;
+  }
+
+  .cards {
+    width: 100%;
+
+    .card1 {
+      width: 10%;
+    }
+    .card2 {
+      width: 60%;
+      p {
+        display: none;
+      }
+      .below {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          display: flex;
+          width: 60%;
+          gap: 5%;
+          align-items: center;
+        }
+      }
+    }
+    .img2 {
+      object-fit: contain;
+      width: 105px;
+
+      border-radius: 50%;
+    }
+  }
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1% 0;
+
+      width: max-content;
+      text-align: center;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
+@media screen and(max-width:500px) {
+  .title {
+    flex-direction: column;
+    gap: 5%;
+
+    input {
+      width: 100%;
+
+      margin: 0 auto;
+    }
+    div {
+      select {
+        margin: 2%;
+      }
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 5% auto 0 auto;
+      gap: 5%;
+    }
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .cards {
+    width: 100%;
+
+    .card1 {
+      h4 {
+        visibility: hidden;
+      }
+    }
+    .card2 {
+      width: 60%;
+      p {
+        display: none;
+      }
+      .below {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          display: flex;
+          width: 60%;
+          gap: 5%;
+          align-items: center;
+        }
+      }
+    }
+    .img2 {
+      object-fit: contain;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1% 0;
+
+      width: max-content;
+      text-align: center;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
 }

@@ -42,6 +42,7 @@ const Main = () => {
           className="li_item"
           active={page === 3 ? true : ""}
           onClick={() => setPage(3)}
+          id="one1"
         >
           {3}
         </Pagination.Item>
@@ -49,18 +50,21 @@ const Main = () => {
           className="li_item"
           active={page === 4 ? true : ""}
           onClick={() => setPage(4)}
+          id="one2"
         >
           {4}
         </Pagination.Item>
         <Pagination.Ellipsis
           className="li_item"
           onClick={() => setPage(page + 1)}
+          id="one3"
         >
           ..
         </Pagination.Ellipsis>
         <Pagination.Ellipsis
           active={page > 4 ? true : true}
           onClick={() => setPage(page + 10)}
+          id="one"
         >
           {page} <sup>(+10)</sup>
         </Pagination.Ellipsis>

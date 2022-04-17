@@ -22,15 +22,6 @@ const Home = () => {
     call();
   }, [page, lang]);
 
-  useEffect(() => {
-    let temp = localStorage.getItem("Page");
-    setPage(JSON.parse(temp));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("Page", JSON.stringify(page));
-  }, [page]);
-
   const call = async () => {
     const resp = await fetch(
       `https://api.github.com/search/repositories?q=language:${lang}&sort=stars&order=desc&page=${page}page&per_page=20`
@@ -146,16 +137,19 @@ const Home = () => {
                         <p>{e.description?.substring(0, 200)}</p>
                         <div className="below">
                           <span> Language : {e.language} </span>
-                          <RiStarSmileFill
-                            color={theme ? "orange" : "yellow"}
-                            style={{ transition: "0.7s ease-in-out" }}
-                          />
-                          {e.stargazers_count}
-                          <GoRepoForked
-                            color={theme ? "orange" : "yellow"}
-                            style={{ transition: "0.7s ease-in-out" }}
-                          />{" "}
-                          {e.forks_count}
+                          <div>
+                            {" "}
+                            <RiStarSmileFill
+                              color={theme ? "orange" : "yellow"}
+                              style={{ transition: "0.7s ease-in-out" }}
+                            />
+                            {e.stargazers_count}
+                            <GoRepoForked
+                              color={theme ? "orange" : "yellow"}
+                              style={{ transition: "0.7s ease-in-out" }}
+                            />{" "}
+                            {e.forks_count}{" "}
+                          </div>
                         </div>
                       </div>
                       <div>
