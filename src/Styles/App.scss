@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$base-color: white;
+$base-color2: red;
+
+.light {
+  transition: 0.7s ease-in-out;
+  background-color: white;
+  color: black;
+
+  span {
+    color: black;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    transition: 0.7s all ease-in-out;
+  }
+
+  select {
+    background-color: white;
+    color: black;
+    transition: 0.7s all ease-in-out;
+  }
+
+  input {
+    background-color: white;
+    color: black;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .li_item a {
+    background-color: white;
+  }
+
+  nav {
+    box-shadow: 0px 0px 8px 0px gray;
+    background-color: $base-color;
+  }
+}
+
+.dark {
+  transition: 0.7s all ease-in-out;
+  background-color: rgb(23, 22, 22);
+  nav {
+    box-shadow: 0px 0px 8px 0px black;
+    background-color: $base-color2;
+  }
+  color: rgb(147, 146, 146);
+
+  .li_item a {
+    background-color: rgb(23, 22, 22);
+  }
+
+  span {
+    color: white;
+  }
+  a {
+    color: gray;
+    text-decoration: none;
+    transition: 0.7s all ease-in-out;
+  }
+
+  select {
+    background-color: #201d1d;
+    color: rgb(147, 146, 146);
+    transition: 0.7s all ease-in-out;
+  }
+  input {
+    background-color: rgb(70, 70, 70);
+    transition: 0.7s all ease-in-out;
+    color: white;
+  }
+  $base-color: black;
+}
