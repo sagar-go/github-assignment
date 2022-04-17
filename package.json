@@ -1,8 +1,8 @@
 {
   "name": "project_1",
   "version": "0.1.0",
-  "homepage": "https://sagar-go.github.io/github-assignment",
-  "private": true,
+  "homepage": "https://sagar-go.github.io/git_clone",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
